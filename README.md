@@ -9,3 +9,6 @@ All feature will be list below:
 
 - App will retain setting of view type and sort type for case  re-create a UI.
 - Icon of file will be base on type of file's extension.
+
+
+![1](https://user-images.githubusercontent.com/38234174/173028515-f68bd435-15f1-460d-addf-cba982f1f32c.PNG)
