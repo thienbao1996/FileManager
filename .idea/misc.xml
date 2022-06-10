@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/FileManagerSimple/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1985" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/drawable/background_et_search.xml" value="0.2265" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/drawable/ic_file_csv.xml" value="0.1985" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/drawable/ic_file_doc.xml" value="0.1985" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/drawable/ic_file_generic.xml" value="0.1985" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/drawable/ic_file_html.xml" value="0.1985" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/drawable/ic_file_jpg.xml" value="0.1985" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/drawable/ic_file_mp4.xml" value="0.1985" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/drawable/ic_file_pdf.xml" value="0.1985" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/drawable/ic_file_sql.xml" value="0.1985" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/drawable/ic_file_txt.xml" value="0.1985" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/drawable/ic_file_xls.xml" value="0.1985" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/drawable/ic_folder_black_32dp.xml" value="0.1" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/drawable/ic_folder_vector.xml" value="0.1985" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/drawable/ic_right_arrow_gray_background.xml" value="0.1985" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/drawable/ic_right_arrow_gray_foreground.xml" value="0.1985" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/drawable/ic_search_gray_24dp.xml" value="0.1985" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/layout/custom_dialog_layout.xml" value="0.2" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/layout/empty_tall_divider.xml" value="0.1" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/layout/fragment_file.xml" value="0.22826086956521738" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/layout/item_files.xml" value="0.536" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/layout/item_files_grid.xml" value="0.22826086956521738" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/menu/sort_menu.xml" value="0.24114583333333334" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/mipmap-anydpi-v26/ic_right_arrow_gray.xml" value="0.1985" />
+        <entry key="..\:/FileManagerSimple/app/src/main/res/xml/searchable.xml" value="0.21784420289855072" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
