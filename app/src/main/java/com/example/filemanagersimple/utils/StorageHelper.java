@@ -45,24 +45,23 @@ public class StorageHelper {
             }
             Log.d("permission", Environment.isExternalStorageManager() + " ");
         }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (isExternalStorageWritable()) {
-                Log.d("permission","Permission write is granted");
+        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (isExternalStorageReadable() && isExternalStorageWritable()) {
+                Log.d("permission","Permission is granted");
             } else {
-                ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
-            }
-
-            if (isExternalStorageReadable()) {
-                Log.d("permission","Permission read is granted");
-            } else {
-                ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 100);
+                ActivityCompat.requestPermissions(activity,
+                        new String[]{
+                                Manifest.permission_group.STORAGE,
+                                Manifest.permission.READ_EXTERNAL_STORAGE,
+                                Manifest.permission.WRITE_EXTERNAL_STORAGE
+                        }, 123);
             }
 
             if (ActivityCompat.checkSelfPermission(activity, Manifest.permission_group.STORAGE)
                     == PackageManager.PERMISSION_GRANTED) {
                 Log.d("permission","Permission storage is granted");
             } else {
-                AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+               *//* AlertDialog.Builder builder = new AlertDialog.Builder(activity);
                 builder.setMessage("Please grant our app access to all your files in Permissions section")
                         .setPositiveButton("Ok", (dialog, which) -> {
                             try {
@@ -77,11 +76,11 @@ public class StorageHelper {
                                 activity.startActivity(intent);
                             }
                         });
-                builder.create().show();
+                builder.create().show();*//*
             }
         } else { //permission is automatically granted on sdk<23 upon installation
             Log.d("permission","Permission is granted");
 
-        }
+        }*/
     }
 }

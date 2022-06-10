@@ -3,9 +3,11 @@ package com.example.filemanagersimple.view;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
 import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -14,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 
 import com.example.filemanagersimple.R;
@@ -36,17 +39,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        StorageHelper.grantStoragePermission(this);
-        Log.d("path sd", Environment.getExternalStorageState());
-        Log.d("path sd", Environment.getExternalStorageDirectory().getPath());
-        Log.d("path sd", Environment.getRootDirectory().getPath());
-        Log.d("path sd", Environment.getDataDirectory().getPath());
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            Log.d("path sd", Environment.getStorageDirectory().getPath());
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            this.requestPermissions(new String[]{Manifest.permission_group.STORAGE}, 111);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
+                && Build.VERSION.SDK_INT < Build.VERSION_CODES.R) {
+            if (ActivityCompat.checkSelfPermission(this,
+                    Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{
+                                Manifest.permission.READ_EXTERNAL_STORAGE,
+                                Manifest.permission.WRITE_EXTERNAL_STORAGE
+                        }, 123);
+            }
+        } else {
+            StorageHelper.grantStoragePermission(this);
         }
 
         getSharedPreferences("SharedPreference", MODE_PRIVATE);
@@ -107,6 +111,23 @@ public class MainActivity extends AppCompatActivity {
             }
             this.getPreferences(MODE_PRIVATE).edit().putInt("ViewType", viewType.value).apply();
         });
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case 123:
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // do nothing
+                } else {
+                    // Permission Denied
+                    Toast.makeText(MainActivity.this, "WRITE_CONTACTS Denied", Toast.LENGTH_SHORT)
+                            .show();
+                }
+                break;
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
     }
 
     @Override
